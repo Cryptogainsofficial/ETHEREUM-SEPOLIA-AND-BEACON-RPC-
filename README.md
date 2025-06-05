@@ -1,4 +1,4 @@
-Step 1. Install Dependecies
+##Step 1. Install Dependecies
 Packages:
 
 sudo apt-get update && sudo apt-get upgrade -y
