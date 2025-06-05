@@ -152,7 +152,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","metho
 __🚫Response if still syncing:__
 ```bash
 {"jsonrpc":"2.0","id":1,"result":{"currentBlock":"0x1a2b3c","highestBlock":"0x1a2b4d","startingBlock":"0x0"}}
-```bash
+```
 
 __Beacon Node Prysm__
 Response if synced:
