@@ -137,4 +137,58 @@ docker compose up -d
 docker compose logs -f
 
 
-![image](https://github.com/user-attachments/assets/6b1aa49e-5f1a-4e1a-9f74-e1124fa977b0)
+
+__As you see in the logs, Prysm is synced, but  Geth will take 2 days to be sync depending on your vps or system specs__
+
+
+__Step 6. Checking If Nodes Are Synced__
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:8545
+ ```
+✅Response if  synced:
+```bash
+{"jsonrpc":"2.0","id":1,"result":false}
+```
+__🚫Response if still syncing:__
+```bash
+{"jsonrpc":"2.0","id":1,"result":{"currentBlock":"0x1a2b3c","highestBlock":"0x1a2b4d","startingBlock":"0x0"}}
+```bash
+
+__Beacon Node Prysm__
+Response if synced:
+```bash
+{"data":{"head_slot":"12345","sync_distance":"0","is_syncing":false}}
+```
+__Response if still syncing:__
+```bash
+{"data":{"head_slot":"12345","sync_distance":"100","is_syncing":true}}
+```
+
+__Step 7. Make Sure  VPS Firewall Is Enabled__
+
+```bash
+sudo ufw allow 22
+sudo ufw allow ssh
+sudo ufw enable
+```
+__Allow Geth P2P ports:__
+```bash
+sudo ufw allow 30303/tcp   # Geth P2P
+sudo ufw allow 30303/udp   # Geth P2P
+```
+__Allow ports for local use can only be used on same machine__
+```bash
+sudo ufw allow from 127.0.0.1 to any port 8545 proto tcp
+sudo ufw allow from 127.0.0.1 to any port 3500 proto tcp
+```
+__Allow ports to use on other machines__
+  __Note replace (your vps ip with your actual machine's ip address__
+```bash
+  sudo ufw allow from <your-vps-ip> to any port 8545 proto tcp
+sudo ufw allow from <your-vps-ip> to any port 3500 proto tcp
+```
+__Reload Firewall to apply changes :__
+
+```bash
+sudo ufw reload
+```
