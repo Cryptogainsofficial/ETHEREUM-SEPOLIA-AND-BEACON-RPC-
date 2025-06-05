@@ -129,13 +129,14 @@ services:
 __COPY ABOVE CODE RIGHT CLICK TO PASTE IN THE NANO FILE  AND THE CTRL (X) THEN Y THEN HI ENTER TO AVE AND EXIT__
 
 __Step 5. Run Geth & Prysm Nodes__
+
 ```bash
 docker compose up -d
  ```
 ```bash
 #CHECLK LOGS#
 docker compose logs -f
-
+ ```
 
 
 __As you see in the logs, Prysm is synced, but  Geth will take 2 days to be sync depending on your vps or system specs__
