@@ -1,3 +1,10 @@
+
+
+
+OS: Ubuntu 20.04 or later
+   RAM	      CPU	             Disk
+8-16 GB  	4-6 cores	  MINIMUM 1 TB TO 2 TB  FOR SMOOTHER EXPERIENCE 
+
 __Step 1. Install Dependecies__
 
  **Packages:**
