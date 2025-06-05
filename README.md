@@ -146,7 +146,7 @@ docker compose logs -f
  ```
 
 
-__As you see in the logs, Prysm is synced, but  Geth will take 2 days to be sync depending on your vps or system specs__
+__U WILL see in the logs, Prysm is synced, but  Geth will take 2 days to be sync depending on your vps or system specs__
 
 
 __Step 6. Checking If Nodes Are Synced__
