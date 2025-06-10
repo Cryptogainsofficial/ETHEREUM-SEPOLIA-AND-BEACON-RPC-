@@ -6,6 +6,12 @@ RAM -  8 - 16 GB
 CPU -  4 CORE
 DISK -  1 TB AND ABOVE
 
+__SETTING__
+you have to be root user to run all commands succesfully if you are not rooy user 
+```bash
+sudo su
+```
+![image](https://github.com/user-attachments/assets/b224d585-3575-450a-a0d0-9b87f7e23868)
 
 __Step 1. Install Dependecies__
 
@@ -62,7 +68,7 @@ cat /root/ethereum/jwt.hex
 __Step 4. Configure docker-compose.yml__
 
 ```bash
-cd ethereum
+cd /root/ethereum
 ```
 ```bash
 nano docker-compose.yml
@@ -168,7 +174,7 @@ __🚫Response if still syncing:__
 __Beacon Node Prysm__
 Response if synced:
 ```bash
-{"data":{"head_slot":"12345","sync_distance":"0","is_syncing":false}}
+curl http://localhost:3500/eth/v1/node/syncing
 ```
 __Response if still syncing:__
 ```bash
