@@ -7,7 +7,7 @@ CPU -  4 CORE
 DISK -  1 TB AND ABOVE
 
 __SETTING__
-you have to be root user to run all commands succesfully if you are not rooy user 
+you have to be root user to run all commands succesfully if you are not root user 
 ```bash
 sudo su
 ```
