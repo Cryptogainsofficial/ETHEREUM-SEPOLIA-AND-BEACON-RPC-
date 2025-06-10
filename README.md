@@ -51,11 +51,10 @@ mkdir -p /root/ethereum/consensus
 
 __Step 3. Generate the JWT secret:__
 
-``bash
+```bash
 openssl rand -hex 32 > /root/ethereum/jwt.hex
 ```
-
-__Verify JWT secrets Installed__
+___Verify JWT secrets Installed___
 ```bash
 cat /root/ethereum/jwt.hex
 ```
