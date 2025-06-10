@@ -182,12 +182,18 @@ __Response if still syncing:__
 ```
 
 __Step 7. Make Sure  VPS Firewall Is Enabled__
-
+Step(7 -1)
+__install ufw__
+```bash
+apt update && apt install ufw -y
+```
 ```bash
 sudo ufw allow 22
 sudo ufw allow ssh
 sudo ufw enable
 ```
+![image](https://github.com/user-attachments/assets/ebb8a5af-d385-42c6-b742-6b6714337505) press y enter
+
 __Allow Geth P2P ports:__
 ```bash
 sudo ufw allow 30303/tcp   # Geth P2P
